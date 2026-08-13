@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Incognito Report</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #f7f4ee;
+        }
+
+        .background {
+            background-image: url("images/CogReport.png");
+            background-size: auto 140%;
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+
+        /* ---------------- Hero ---------------- */
+
+        .hero {
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: "Libre Baskerville", serif;
+            font-size: 5rem;
+            color: #cb6a2d;
+            letter-spacing: 3px;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #444;
+        }
+
+        .button {
+            margin-top: 40px;
+
+            padding: 14px 32px;
+
+            background: #cb6a2d;
+            color: white;
+
+            text-decoration: none;
+            border-radius: 5px;
+
+            transition: .25s;
+        }
+
+        .button:hover {
+            background: #a94e18;
+        }
+
+        /* ---------------- Sections ---------------- */
+
+        .panel {
+
+            width: min(1000px, 90%);
+            margin: 120px auto;
+
+            background: rgba(255, 255, 255, .82);
+
+            backdrop-filter: blur(10px);
+
+            padding: 60px;
+
+            border-top: 6px solid #cb6a2d;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, .15);
+        }
+
+        .panel h2 {
+            font-family: "Libre Baskerville", serif;
+            color: #cb6a2d;
+
+            margin-bottom: 25px;
+        }
+
+        .panel p {
+            line-height: 1.8;
+        }
+
+        /* Fake podcast cards */
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 25px;
+
+            margin-top: 40px;
+        }
+
+        .card {
+
+            background: #fafafa;
+
+            padding: 25px;
+
+            border-left: 5px solid #cb6a2d;
+
+            transition: .25s;
+        }
+
+        .card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+
+        }
+
+        .card small {
+            color: #777;
+        }
+
+        footer {
+
+            text-align: center;
+
+            padding: 80px 20px;
+
+            color: #666;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="background"></div>
+    <section class="hero">
+
+        <h1>THE INCOGNITO REPORT</h1>
+
+        <p>Truth hides in plain sight.</p>
+
+        <a href="#episodes" class="button">
+            Listen Now
+        </a>
+
+    </section>
+
+    <section class="panel" id="episodes">
+
+        <h2>Latest Episodes</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <small>Episode 014</small>
+                <h3>Who Lives Beneath Patiala?</h3>
+                <p>
+                    Three eyewitnesses. Two disappearances. One abandoned drainage tunnel.
+                </p>
+            </div>
+
+            <div class="card">
+                <small>Episode 013</small>
+                <h3>The White Deer</h3>
+                <p>
+                    A creature seen by hunters for nearly fifty years.
+                </p>
+            </div>
+
+            <div class="card">
+                <small>Episode 012</small>
+                <h3>Dead Air</h3>
+                <p>
+                    Late-night radio broadcasts that shouldn't exist.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="panel">
+
+        <h2>Case Files</h2>
+
+        <p>
+            The Incognito Report investigates unexplained phenomena across the country.
+            Every story is catalogued, cross-referenced, and archived. Official sources
+            dismiss these events as coincidence. We disagree.
+        </p>
+
+    </section>
+
+    <section class="panel">
+
+        <h2>Submit a Sighting</h2>
+
+        <p>
+            Seen something you can't explain? Every report is reviewed. Identities remain
+            confidential.
+        </p>
+
+    </section>
+
+    <footer>
+
+        © The Incognito Report • "Question Everything."
+
+    </footer>
+    <script>
+        const bg = document.querySelector(".background");
+
+        window.addEventListener("scroll", () => {
+            const scroll = window.scrollY;
+
+            // 0.3 = 30% of the scroll speed
+            bg.style.transform = `translateY(${scroll * -0.3}px)`;
+        });
+    </script>
+</body>
+
+</html>

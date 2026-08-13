@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    background: #f7f4ee;
+}
+
+.background {
+    position: fixed;
+    top: -20vh;
+    left: 0;
+    width: 100%;
+    height: 500vh;
+    z-index: -2;
+}
+
+.background-default{
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(255, 117, 4, 0.725), rgba(255,255,255,0.25)), 
+    url("assets/CogReport.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+
+    transform: translateY(0);
+    will-change: transform;
+}
+
+.bg1 {
+    background: linear-gradient(rgba(255, 117, 4, 0.725), rgba(255,255,255,0.25)), 
+    url("assets/CogReport.png");
+    height: 100vh;
+}
+
+.bg2 {
+    background: url("assets/CogReport2.png");
+    height: 100vh;
+}
+
+.title {
+    font-size: 6em;
+    color: #f4efe5;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.paper {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 60px;
+
+    background:
+        linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.25)),
+        url("assets/white-crumpled-paper-texture-background.png");
+
+    background-size: auto;
+    background-repeat: repeat;
+
+    color: #222;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.18),
+        inset 0 0 40px rgba(0,0,0,.05);
+
+    border-radius: 2px;
+    font-family: "EB Garamond", sans-serif;
+}
+
+.paper h1 {
+    font-family: "Bebas Neue", sans-serif;
+    color: #f57418;
+}
+
+.main-nav{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:20px;
+    font-family:"Archivo Black",sans-serif;
+}
+
+.main-nav a{
+    color:white;
+    font-size:2rem;
+    text-decoration:none;
+    letter-spacing:2px;
+    position:relative;
+}
+
+.main-nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+
+    width:100%;
+    height:4px;
+
+    background:#ff7a00;
+
+    transform:scaleX(0);
+    transform-origin:center;
+    transition:.2s;
+}
+
+.main-nav a:hover::after{
+    transform:scaleX(1);
+}
+
+.director-price {
+	margin: 0;
+	padding: 36px 0 36px 84px;
+	list-style: none;
+	background-image: url("Price.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 70px;
+}
+
+.moon-landing{
+    margin: 0;
+	padding: 36px 0 36px 84px;
+	list-style: none;
+	background-image: url("assets/images.jpg");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 80px;
+}
+
+.silver{
+    margin: 0;
+	padding: 36px 0 36px 84px;
+	list-style: none;
+	background-image: url("assets/Lone_Ranger_Silver_Bullet.jpg");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 80px;
+}
+
+.saviti-chopra{
+    margin: 0;
+	padding: 36px 0 36px 84px;
+	list-style: none;
+	background-image: url("assets/Saviti_Chopra.webp");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 80px;
+}
+
+.fallen-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.fallen-columns table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fallen-columns th,
+.fallen-columns td {
+    padding: 6px 10px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
